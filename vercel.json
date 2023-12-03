@@ -1,0 +1,17 @@
+{
+ "builds":[{
+    "src":"postgresTest/wsgi.py",
+    "use":"@vercel/python",
+    "config":{"maxLambda":"15mb","runtime":"python3.9"}
+ }],
+ "routes":[
+    {
+        "src":"/(.*)",
+        "dest":"postgresTest/wsgi.py"
+    }
+ ]
+
+
+
+
+}

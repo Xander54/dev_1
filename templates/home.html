@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token%}
+        <p>Enter your link to QR :
+        <input type="url" name="url" >
+        </p>
+        <p><input type="submit" value="Create QR">
+        </p>
+            
+        </form>
+        <p><h2>{{loc}}</h2></p>
+    </body>
+</html>
